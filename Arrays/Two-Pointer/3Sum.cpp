@@ -1,11 +1,12 @@
-#include <algorithm>
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
+using namespace std;
 
-std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
-    std::vector<std::vector<int>> result;
-    std::sort(nums.begin(), nums.end());
+vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> result;
+    sort(nums.begin(), nums.end());
     int n = nums.size();
     int a;
     int b;
@@ -42,13 +43,13 @@ std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
 }
 
 int main(void) {
-	std::vector<int> nums = {0,6,1,4,-6,2,-3};
-	std::vector<std::vector<int>> result = threeSum(nums);
+	vector<int> nums = {0,6,1,4,-6,2,-3};
+	vector<vector<int>> result = threeSum(nums);
 
-	for (std::vector<int> arr : result) {
+	for (vector<int> arr : result) {
 		for (int elem : arr) {
-			std::cout << elem << ", ";
+			cout << elem << ", ";
 		}
-		std::cout << "\n";
+		cout << "\n";
 	}
 }
